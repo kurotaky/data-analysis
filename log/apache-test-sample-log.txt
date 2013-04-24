@@ -1,0 +1,55 @@
+
+R version 2.10.0 (2009-10-26)
+Copyright (C) 2009 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+
+Rは、自由なソフトウェアであり、「完全に無保証」です。 
+一定の条件に従えば、自由にこれを再配布することができます。 
+配布条件の詳細に関しては、'license()'あるいは'licence()'と入力してください。 
+
+Rは多くの貢献者による共同プロジェクトです。 
+詳しくは'contributors()'と入力してください。 
+また、RやRのパッケージを出版物で引用する際の形式については
+'citation()'と入力してください。 
+
+'demo()'と入力すればデモをみることができます。 
+'help()'とすればオンラインヘルプが出ます。 
+'help.start()'でHTMLブラウザによるヘルプがみられます。 
+'q()'と入力すればRを終了します。 
+
+[R.app GUI 1.30 (5511) i386-apple-darwin9.8.0]
+
+[Workspace restored from /Users/yuta/.RData]
+
+> x<-read.table("Rtest/apache-test-sample.csv",header=T,sep=",")
+> x
+     A  B
+1   57 89
+2  120 30
+3  101 82
+4  137 50
+5  119 39
+6  117 22
+7  104 57
+8   73 32
+9   53 96
+10  68 31
+11 118 88
+> mean(x)
+ A  B 
+97 56 
+> t.test(x$A,x$B,var.equal=T)     # 等分散を仮定したt検定
+
+	Two Sample t-test
+
+data:  x$A and x$B 
+t = 3.3764, df = 20, p-value = 0.003
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ 15.66997 66.33003 
+sample estimates:
+mean of x mean of y 
+       97        56 
+
+> save.image()
+> 
