@@ -21,7 +21,7 @@ Rは多くの貢献者による共同プロジェクトです。
 
 [Workspace restored from /Users/yuta/.RData]
 
-> x<-read.table("Rtest/apache-test-sample.csv",header=T,sep=",")
+> x<-read.table("Rtest/apache_test_sample.csv",header=T,sep=",")
 > x
      A  B
 1   57 89
